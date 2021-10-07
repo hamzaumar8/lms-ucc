@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-=cb$wqtg6nh+c)1r#&m*ygyaj80_)xvw5quq@-kvhg)uk-dwdn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://lms-opata.herokuapp.com', 'https://www.lms-opata.herokuapp.com', 'www.lms-opata.herokuapp.com']
 
 
 # Application definition
@@ -131,3 +131,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+if DEBUG :
+    ALLOWED_HOSTS = []
