@@ -13,9 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=cb$wqtg6nh+c)1r#&m*ygyaj80_)xvw5quq@-kvhg)uk-dwdn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['lms-opata.herokuapp.com']
+ALLOWED_HOSTS = ['lms-opata.herokuapp.com','localhost', '127.0.0.1']
 
 
 # Application definition
@@ -134,5 +134,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
-if DEBUG :
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
