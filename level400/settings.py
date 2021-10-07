@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-=cb$wqtg6nh+c)1r#&m*ygyaj80_)xvw5quq@-kvhg)uk-dwdn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://lms-opata.herokuapp.com']
+ALLOWED_HOSTS = ['lms-opata.herokuapp.com']
 
 
 # Application definition
@@ -127,6 +127,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Activate Django-Heroku.
